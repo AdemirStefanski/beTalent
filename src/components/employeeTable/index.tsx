@@ -40,10 +40,11 @@ const EmployeeTable: React.FC<EmployeeTableProps> = ({ search }) => {
   // Função simples para formatar o telefone
   const formatPhone = (phone: string) => {
     if (phone.length === 13 && phone.startsWith('55')) {
-      const area = phone.substring(2, 4);
-      const firstPart = phone.substring(4, 9);
-      const secondPart = phone.substring(9);
-      return `(${area}) ${firstPart}-${secondPart}`;
+      const country = phone.substring(0, 2); 
+      const area = phone.substring(2, 4);      
+      const firstPart = phone.substring(4, 9);   
+      const secondPart = phone.substring(9);     
+      return `+${country} (${area}) ${firstPart}-${secondPart}`;
     }
     return phone;
   };
