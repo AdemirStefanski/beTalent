@@ -7,7 +7,7 @@ import {
   TableRow, 
   TableCell, 
   EmployeeImage,
-  // Estilos mobile importados abaixo:
+  // Estilos mobile importados abaixo;
   MobileTableContainer,
   MobileTableHeader,
   MobileHeaderLeft,
@@ -39,7 +39,7 @@ interface EmployeeTableProps {
   search: string;
 }
 
-// Funções de formatação (iguais às anteriores)
+// Funções de formatação da data;
 const formatDate = (dateString: string) => {
   const date = new Date(dateString);
   return date.toLocaleDateString('pt-BR');
@@ -56,7 +56,7 @@ const formatPhone = (phone: string) => {
   return phone;
 };
 
-// Componente para cada funcionário na versão mobile
+// Componente para cada funcionário na versão mobile;
 const MobileEmployeeRow: React.FC<{ employee: Employee }> = ({ employee }) => {
   const [expanded, setExpanded] = useState(false);
   const toggleExpanded = () => setExpanded(!expanded);
@@ -117,7 +117,7 @@ const EmployeeTable: React.FC<EmployeeTableProps> = ({ search }) => {
     );
   });
 
-  // Versão mobile se a largura for menor que 550px
+  // Versão mobile (limitador de 550px);
   if (windowWidth < 550) {
     return (
       <MobileTableContainer>
@@ -141,7 +141,7 @@ const EmployeeTable: React.FC<EmployeeTableProps> = ({ search }) => {
     );
   }
 
-  // Versão desktop (já existente)
+  // Versão desktop;
   return (
     <TableContainer>
       <TableHeader>

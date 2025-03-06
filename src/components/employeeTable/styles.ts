@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-/* ===== Estilos Desktop ===== */
+/* ===== Desktop ===== */
 export const TableContainer = styled.div`
   width: 90%;
   max-width: 1400px;
@@ -57,7 +57,7 @@ export const EmployeeImage = styled.img`
 `;
 
 
-/* ===== Estilos Mobile ===== */
+/* ===== Mobile ===== */
 export const MobileTableContainer = styled.div`
   width: 90%;
   max-width: 1400px;
@@ -97,7 +97,6 @@ export const MobileHeaderRight = styled.div`
   padding-right:18px;
 `;
 
-// Bolinha branca de 8px de diâmetro no cabeçalho mobile
 export const WhiteDot = styled.div`
   width: 8px;
   height: 8px;
@@ -105,13 +104,11 @@ export const WhiteDot = styled.div`
   background-color: #fff;
 `;
 
-// Container da linha do funcionário (versão mobile)
 export const MobileRowContainer = styled.div`
   border-bottom: 1px solid #ddd;
   cursor: pointer;
 `;
 
-// Componente que contém foto, nome e sinal de maior
 export const MobileRowMain = styled.div`
   display: flex;
   align-items: center;
@@ -119,7 +116,6 @@ export const MobileRowMain = styled.div`
   width: 100%;
 `;
 
-// Estilo da foto com distância de 16px da lateral esquerda
 export const MobileEmployeeImage = styled.img`
   width: 34px;
   height: 34px;
@@ -128,7 +124,6 @@ export const MobileEmployeeImage = styled.img`
   margin-left: 16px;
 `;
 
-// Nome do funcionário com distância de 24px em relação à foto
 export const MobileEmployeeName = styled.div`
   font-family: 'Helvetica Neue', sans-serif;
   font-weight: 400;
@@ -144,11 +139,10 @@ export const MobileToggleIcon = styled.img`
   margin-right: 23px;
 `;
 
-// Detalhes expandidos (linha para Cargo, Data de admissão e Telefone)
 export const MobileExpandedDetails = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Espaçamento de 15px entre as linhas */
+  gap: 15px; 
   padding-bottom: 31px;
 `;
 
@@ -158,17 +152,16 @@ export const MobileDetailRow = styled.div`
   align-items: center;
   padding: 0 16px;
   position: relative;
-  /* Adiciona a linha tracejada abaixo do conteúdo */
+  
   &::after {
     content: "";
     position: absolute;
-    bottom: -1px; /* ajuste esse valor conforme necessário para posicionar a linha */
-    left: 16px;   /* inicia a linha a partir do início do conteúdo (respectando o padding) */
-    right: 39px;  /* termina a linha na borda direita do conteúdo */
+    bottom: -1px; 
+    left: 16px;   
+    right: 39px;  
     border-bottom: 1px dashed #DFDFDF;
   }
 `;
-
 
 export const MobileDetailLabel = styled.span`
   font-family: 'Helvetica Neue', sans-serif;
